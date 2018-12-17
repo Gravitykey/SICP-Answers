@@ -1,0 +1,12 @@
+(define (same-parity . s )
+  (let loop( (s s) (par (remainder (car s) 2)) ) 
+      (if (null? s)
+        '()
+        (if (= (remainder (car s) 2) par)
+          (cons (car s) (loop (cdr s) par ) )
+          (loop (cdr s) par )))))
+
+(newline)
+(display (same-parity 1 2 3 4 5 6 7))
+(newline)
+(display (same-parity  2 3 4 5 6 7))
