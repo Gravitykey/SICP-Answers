@@ -18,7 +18,7 @@
 (define (operands exp) (cdr exp))
 
 
-; a）上面做了什么。为什么无法将谓词number? same-variable?也加入数据导向分派中？
+; a）上面做了什么。为什么无法将谓词nu mber? same-variable?也加入数据导向分派中？
 
 ; 因为number? 和 variable? 是简单调用语言内置的过程，且功能单一，参数也是基本类型。判断数字和变量是求导过程
 ; 需要进行的基本操作。强行放入只会画蛇添足造成麻烦。
