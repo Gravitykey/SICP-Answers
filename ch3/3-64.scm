@@ -1,0 +1,10 @@
+(define (stream-limit stream tolerance)
+  (define (good-enough? a b)
+    (< (abs (- a b)) tolerance))
+  (define (loop s)
+    (let ((a (stream-ref s 0))
+          (b (stream-ref s 1)))
+      (if (good-enough? a b)
+          b
+          (loop (stream-cdr s)))))
+  (loop stream))
