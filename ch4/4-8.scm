@@ -19,8 +19,6 @@
     (list (make-define (cons (named-let-name exp) (named-let-vars exp)) (named-let-body exp))
           (cons (named-let-name exp) (named-let-values exp))))
 
-; 修改eval部分略
-
 ; 测试
 (named-let->define '(let func ((va 1)(vb 2)) ((body1)(body2))))
 ;Value 13: ((define (func va vb) ((body1) (body2))) (func 1 2))
